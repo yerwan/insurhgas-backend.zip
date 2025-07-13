@@ -1,0 +1,183 @@
+{
+  "info": {
+    "name": "YT Shorts Backend API",
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "description": "Test all endpoints of yt-shorts-backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Root Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            ""
+          ]
+        }
+      }
+    },
+    {
+      "name": "Signup",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "username",
+              "value": "user1"
+            },
+            {
+              "key": "password",
+              "value": "pass1"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/signup",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "signup"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "username",
+              "value": "admin"
+            },
+            {
+              "key": "password",
+              "value": "admin"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/login",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "login"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Make Clip",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"youtube_url\": \"https://youtube.com/watch?v=dQw4w9WgXcQ\", \"start_time\": \"00:00:05\", \"end_time\": \"00:00:15\", \"subtitle_style\": \"classic\"}"
+        },
+        "url": {
+          "raw": "{{base_url}}/make_clip",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "make_clip"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Subtitles",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/get_subtitles",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "get_subtitles"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Transcript",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/get_transcript",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "get_transcript"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Preview Clip",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/preview_clip",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "preview_clip"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Download Clip",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/download_clip",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "download_clip"
+          ]
+        }
+      }
+    }
+  ]
+}
